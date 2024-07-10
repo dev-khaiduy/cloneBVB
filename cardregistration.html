@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Mở Thẻ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #002b80;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header .container, footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header-logo img {
+            max-height: 50px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .main-content {
+            padding: 2em;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .form-section {
+            margin-top: 2em;
+        }
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .input-group {
+            margin-bottom: 1em;
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group label {
+            margin-bottom: 0.5em;
+        }
+        .input-group input,
+        .input-group select {
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75em 1.5em;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0055a5;
+        }
+        .btn-container {
+            text-align: right;
+            margin-top: 1em;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-logo">
+                <img src="/assets/logo.png" alt="BVBank Logo">
+            </div>
+            <nav>
+                <a href="#">Tiết kiệm & Đầu tư</a>
+                <a href="#">Tài khoản & Dịch vụ</a>
+                <a href="#">Thẻ</a>
+                <a href="#">Khoản vay</a>
+                <a href="#">Bảo hiểm liên kết</a>
+                <a href="#">Ưu đãi</a>
+                <a href="#">Ngân hàng điện tử</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="form-section">
+            <h2>Thông tin đăng ký</h2>
+            <form id="registrationForm">
+                <!-- Thông tin liên lạc -->
+                <div class="info">
+                    <h3>Thông tin liên lạc</h3>
+                    <div class="input-group">
+                        <label for="salutation">Danh xưng</label>
+                        <select id="salutation" name="salutation" required>
+                            <option value="mr">Ông</option>
+                            <option value="mrs">Bà</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="fullName">Họ và tên *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Số điện thoại *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <!-- Thông tin chi tiết -->
+                <div class="info">
+                    <h3>Thông tin chi tiết</h3>
+                    <div class="input-group">
+                        <label for="income">Mức thu nhập hiện tại *</label>
+                        <input type="text" id="income" name="income" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="province">Tỉnh/Thành phố sinh sống *</label>
+                        <select id="province" name="province" required>
+                            <option value="">Chọn Tỉnh/Thành phố</option>
+                            <!-- Add options here -->
+                            <option value="ha-noi">Hà Nội</option>
+                            <option value="ho-chi-minh">Hồ Chí Minh</option>
+                            <!-- More options as needed -->
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="cardType">Loại thẻ</label>
+                        <select id="cardType" name="cardType" required>
+                            <option value="">Chọn Loại thẻ</option>
+                            <option value="jcb-standard">Thẻ tín dụng JCB Standard</option>
+                            <option value="jcb-gold">Thẻ tín dụng JCB Gold</option>
+                            <option value="jcb-platinum">Thẻ tín dụng JCB Platinum</option>
+                            <option value="visa-classic">Thẻ tín dụng Visa Classic</option>
+                            <option value="visa-gold">Thẻ tín dụng Visa Gold</option>
+                            <option value="visa-platinum">Thẻ tín dụng Visa Platinum</option>
+                            <option value="visa-lifestyle">Thẻ tín dụng Visa Lifestyle</option>
+                            <option value="visa-joy">Thẻ tín dụng Visa Joy</option>
+                            <option value="debit-visa">Thẻ ghi nợ quốc tế Visa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn">Tiếp tục</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BVBank. All rights reserved. | <a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Đăng ký thành công!');
+        });
+    </script>
+</body>
+</html>

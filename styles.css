@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    background-color: #004080;
+    padding: 10px 0;
+    color: white;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+}
+
+.nav-left ul, .nav-right ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left ul li, .nav-right ul li {
+    margin-left: 20px;
+}
+
+.nav-left ul li a, .nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 40px 20px;
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 10px; /* Điều chỉnh khoảng cách từ trên cùng */
+    left: 10px; /* Điều chỉnh khoảng cách từ trái */
+    font-size: 14px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8); /* Nền nhẹ để nổi bật trên nền hình ảnh */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #004080;
+}
+
+.login-section {
+    position: relative; /* Thêm để định vị con cháu */
+    display: flex;
+    justify-content: flex-end; /* Đẩy nội dung sang bên phải */
+    align-items: center;
+    background: url('assets/banner.png') no-repeat center center; /* Hình nền bao phủ toàn bộ */
+    background-size: cover;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.8); /* Tùy chọn: Để làm nổi bật form */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.logo-img {
+    width: 200px; /* Điều chỉnh kích thước logo nhỏ lại */
+    height: auto;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    color: #888;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: #004080;
+    text-decoration: none;
+}
+
+.qr-code {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+}
+
+.info-links {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.info-links li {
+    margin-bottom: 10px;
+}
+
+.info-links a {
+    color: #004080;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.info-links a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #004080;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}

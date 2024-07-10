@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVBank DigiBank</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-row">
+                <nav class="nav-left">
+                    <ul>
+                        <li><a href="#">Cá nhân</a></li>
+                        <li><a href="#">Doanh nghiệp</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav-right">
+                    <ul>
+                        <li><a href="#">Điểm giao dịch & ATM</a></li>
+                        <li><a href="#">1900 555 53</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-logo">
+            <img src="assets/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="login-section">
+            <div class="breadcrumb">
+                <a href="#">Cá nhân</a> > <a href="#">Ngân hàng Điện tử</a> > <a href="#">Đăng nhập</a>
+            </div>
+            <div class="login-form">
+                <h2>Khách hàng cá nhân</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">
+                            <i class="fas fa-user"></i>
+                        </label>
+                        <input type="text" id="username" placeholder="Tên đăng nhập...">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i>
+                        </label>
+                        <input type="password" id="password" placeholder="Mật khẩu...">
+                        <span class="toggle-password">
+                            <i class="fas fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <button type="submit" id="loginButton" class="login-button">Đăng nhập</button>
+                    <a href="#" class="forgot-password">Quên mật khẩu</a>
+                </form>
+                <div class="qr-code">
+                    <img src="assets/qr.png" alt="QR Code">
+                    <p>Quét mã QR để tải Ngân hàng số Digimi</p>
+                </div>
+                <ul class="info-links">
+                    <li><a href="#">Điều khoản & Điều kiện sử dụng</a></li>
+                    <li><a href="#">Hướng dẫn sử dụng</a></li>
+                    <li><a href="#">Hướng dẫn giao dịch an toàn</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Liên hệ BVBank</a>
+                <a href="#">Các câu hỏi thường gặp - FAQs</a>
+                <a href="#">Về BVBank</a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            if (username) {
+                localStorage.setItem('username', username);
+                window.location.href = 'index.html';
+            } else {
+                alert('Vui lòng nhập tên đăng nhập');
+            }
+        });
+    </script>
+</body>
+</html>

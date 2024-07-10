@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Sản Phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #002b80;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .header-logo img {
+            max-height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content-wrap {
+            padding: 20px;
+        }
+        .content-wrap h2 {
+            text-align: center;
+            color: #002b80;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .btn-wrap {
+            text-align: center;
+        }
+        .btn-white {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #002b80;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        .btn-white:hover {
+            background-color: #0044cc;
+            color: white;
+        }
+        footer p {
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="/assets/logo.png" alt="BVBank Logo">
+        </div>
+        <nav>
+            <a href="#">Tiết kiệm & Đầu tư</a>
+            <a href="#">Tài khoản & Dịch vụ</a>
+            <a href="#">Thẻ</a>
+            <a href="#">Khoản vay</a>
+            <a href="#">Bảo hiểm liên kết</a>
+            <a href="#">Ưu đãi</a>
+            <a href="#">Ngân hàng điện tử</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content-wrap">
+            <h2>Đăng Ký Sản Phẩm</h2>
+            <form action="cardsub.html" method="post">
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Tỉnh/Thành</label>
+                    <select id="location" name="location" required>
+                        <option value="">Chọn Tỉnh/Thành phố đang sinh sống</option>
+                        <option value="Hanoi">Hà Nội</option>
+                        <option value="HCM">Hồ Chí Minh</option>
+                        <!-- More options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product">Sản phẩm</label>
+                    <select id="product" name="product" required>
+                        <option value="">Chọn sản phẩm</option>
+                        <option value="account">Tài khoản thanh toán</option>
+                        <option value="credit">Thẻ tín dụng</option>
+                        <option value="digital">Ngân hàng điện tử</option>
+                        <option value="secured-loan">Vay có tài sản đảm bảo</option>
+                        <option value="unsecured-loan">Vay không có tài sản đảm bảo</option>
+                        <option value="savings">Tiết kiệm</option>
+                        <option value="insurance">Bảo hiểm</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="btn-wrap">
+                    <button type="submit" class="btn btn-white">Tiếp tục</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BVBank. All rights reserved. | <a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
