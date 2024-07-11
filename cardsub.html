@@ -135,49 +135,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <ul>
                                                                                                                         <li class=" ">
-                                            <a href="https://bvbank.net.vn/ca-nhan/tiet-kiem-dau-tu/">Tiết kiệm &#038; Đầu tư</a>
+                                            <a href="#">Tiết kiệm &#038; Đầu tư</a>
 
                                                                                                                                         
 
 
                                         </li>
                                                                                                                         <li class=" ">
-                                            <a href="https://bvbank.net.vn/ca-nhan/tai-khoan-dich-vu/">Tài khoản & Dịch vụ</a>
+                                            <a href="#">Tài khoản & Dịch vụ</a>
 
                                                                                                                                         
 
 
                                         </li>
                                                                                                                         <li class="active ">
-                                            <a href="https://bvbank.net.vn/ca-nhan/the/">Thẻ</a>
+                                            <a href="cardcategory.html">Thẻ</a>
 
                                                                                                                                         
 
 
                                         </li>
                                                                                                                         <li class=" ">
-                                            <a href="https://bvbank.net.vn/ca-nhan/khoan-vay/">Khoản vay</a>
+                                            <a href="loancategory.html">Khoản vay</a>
 
                                                                                                                                         
 
 
                                         </li>
                                                                                                                         <li class=" ">
-                                            <a href="https://bvbank.net.vn/ca-nhan/bao-hiem-lien-ket/">Bảo hiểm liên kết</a>
+                                            <a href="#">Bảo hiểm liên kết</a>
 
                                                                                                                                         
 
 
                                         </li>
                                                                                                                         <li class=" d-none d-lg-block">
-                                            <a href="https://bvbank.net.vn/ca-nhan/uu-dai/">Ưu đãi</a>
+                                            <a href="#">Ưu đãi</a>
 
                                                                                                                                         
 
 
                                         </li>
                                                                                                                         <li class=" ">
-                                            <a href="https://bvbank.net.vn/ca-nhan/ngan-hang-dien-tu/">Ngân hàng điện tử</a>
+                                            <a href="#">Ngân hàng điện tử</a>
 
                                                                                                                                         
 
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </ul>
                                 </li>
                                 <li class=" d-pos-02">
-                                    <a href="https://bvbank.net.vn/doanh-nghiep/" class="d-flex align-items-center">
+                                    <a href="#" class="d-flex align-items-center">
                                         <div class="icon-wrap">
                                             <img class="lazy-img" src="https://bvbank.net.vn/wp-content/themes/bvb/www/img/icon_nav_khdn.png" alt="" data-src="https://bvbank.net.vn/wp-content/themes/bvb/www/img/icon_nav_khdn.png">
                                             <img class="lazy-img" src="https://bvbank.net.vn/wp-content/themes/bvb/www/img/icon_nav_khdn_w.png" alt="" data-src="https://bvbank.net.vn/wp-content/themes/bvb/www/img/icon_nav_khdn_w.png">
@@ -314,9 +314,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="tel:1900555596" class="header-e d-flex align-items-center justify-content-center call-btn d-lg-none">
                     <img class="lazy-img" src="https://bvbank.net.vn/wp-content/themes/bvb/www/img/icon_nav_lh.png" alt="" data-src="https://bvbank.net.vn/wp-content/themes/bvb/www/img/icon_nav_lh.png">
                 </a>
-                                <a href="https://digibank.bvbank.net.vn/login?type=cn" class="header-e btn btn-bvb login-btn is-01">Đăng nhập</a>
-                <a href="https://digibank.bvbank.net.vn/login?type=dn" class="header-e btn btn-bvb login-btn is-02">Đăng nhập</a>
-
+                <div id="user-actions">
+                    <a href="/login.html" class="header-e btn btn-bvb login-btn is-01">Đăng nhập</a>
+                    <a href="/login.html" class="header-e btn btn-bvb login-btn is-02">Đăng nhập</a>
+                </div>
                 
                 <div class="search-suggestion-list">
                     <div class="container">
@@ -1358,6 +1359,26 @@ var ajax_object = {"url":"https:\/\/bvbank.net.vn\/wp-admin\/admin-ajax.php"};
 
 
 <script>var listAdress = []</script>
+//đăng nhập localstorage
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var username = localStorage.getItem('username');
+        var userActions = document.getElementById('user-actions');
+
+        if (username) {
+            userActions.innerHTML = `
+                <span class="header-e btn btn-bvb username-display">Xin chào, ${username}</span>
+                <a href="#" id="logout-link" class="header-e btn btn-bvb logout-btn">Thoát</a>
+            `;
+
+            document.getElementById('logout-link').addEventListener('click', function(event) {
+                event.preventDefault();
+                localStorage.removeItem('username');
+                window.location.reload();
+            });
+        }
+    });
+</script>
 
 <script>
     jQuery(document).on("gform_confirmation_loaded", function (e, form_id) {
