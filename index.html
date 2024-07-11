@@ -114,14 +114,14 @@
 
                                         </li>
                                                                                                                         <li class=" ">
-                                            <a href="/cardcategory.html">Thẻ</a>
+                                            <a href="/cardcategory.html" id="cardCategory">Thẻ</a>
 
                                                                                                                                         
 
 
                                         </li>
                                                                                                                         <li class=" ">
-                                            <a href="/loancategory.html">Khoản vay</a>
+                                            <a href="/loancategory.html" id="loanCategory">Khoản vay</a>
 
                                                                                                                                         
 
@@ -1562,6 +1562,8 @@ var ajax_object = {"url":"https:\/\/bvbank.net.vn\/wp-admin\/admin-ajax.php"};
 
 
 <script>var listAdress = []</script>
+
+//đăng nhập localstorage
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var username = localStorage.getItem('username');
@@ -1579,6 +1581,30 @@ var ajax_object = {"url":"https:\/\/bvbank.net.vn\/wp-admin\/admin-ajax.php"};
                 window.location.reload();
             });
         }
+    });
+</script>
+//cardcategory
+<script>
+    // Hàm để chạy smartech khi click
+    function runSmartechScript(idName, url, title) {
+        smartech('dispatch', idName, {
+            'url': url,
+            'title': title
+        });
+    }
+
+    //Thêm sự kiện click cho thẻ "Thẻ"
+    document.getElementById('cardCategory').addEventListener('click', function(event) {
+        // event.preventDefault(); // Ngăn chặn hành động mặc định
+        runSmartechScript('card category', '/cardcategory.html', 'Card Category');
+        // window.location.href = '/cardcategory.html'; // Chuyển hướng sau khi chạy script
+    });
+
+    // Thêm sự kiện click cho thẻ "Khoản vay"
+    document.getElementById('loanCategory').addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định
+        runSmartechScript('loan category', '/loancategory.html', 'Loan Category');
+        window.location.href = '/loancategory.html'; // Chuyển hướng sau khi chạy script
     });
 </script>
 
