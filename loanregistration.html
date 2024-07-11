@@ -157,15 +157,15 @@
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            let product = document.getElementById('product').value;
+            var productText = document.getElementById('product').selectedOptions[0].text;
 
             smartech('dispatch', 'Form Submit', {
                 'service_type':'Loan' ,
                 'url': window.location.href,
                 'title': document.title,
-                'product':product
+                'product':productText
             });
-            
+
             alert('Đăng ký thành công!');
         });
 
