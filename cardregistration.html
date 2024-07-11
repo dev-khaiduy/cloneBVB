@@ -191,18 +191,17 @@ smartech('dispatch',1,{});
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
+            alert('Đăng ký thành công!');
+
+
             let cardtypeText = document.getElementById('cardType').selectedOptions[0].text;
-            let provinceText = document.getElementById('province').selectedOptions[0].text;
-            let income = document.getElementById('income').value;
             smartech('dispatch', 'Form Submit', {
-                'service_type':'Card' ,
+                'service_type':'Card',
                 'url': window.location.href,
                 'title': document.title,
-                'personal_income': income,
-                'province': provinText,
                 'card_type': cardtypeText
                     });
-            alert('Đăng ký thành công!');
+            
         });
 
         document.addEventListener('DOMContentLoaded', function() {

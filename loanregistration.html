@@ -157,7 +157,8 @@
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            var productText = document.getElementById('product').selectedOptions[0].text;
+            alert('Đăng ký thành công!');
+            let productText = document.getElementById('product').selectedOptions[0].text;
 
             smartech('dispatch', 'Form Submit', {
                 'service_type':'Loan' ,
@@ -165,8 +166,6 @@
                 'title': document.title,
                 'product':productText
             });
-
-            alert('Đăng ký thành công!');
         });
 
         document.addEventListener('DOMContentLoaded', function() {
