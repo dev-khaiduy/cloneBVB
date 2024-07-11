@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src='//cdnt.netcoresmartech.com/smartechclient.js'></script>
-<script>
-smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G' );
-smartech('register', '9028856153133683c37a942d18e07470');
-smartech('identify', '');
-smartech('dispatch',1,{});
-</script>
+    <script>
+    smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G' );
+    smartech('register', '9028856153133683c37a942d18e07470');
+    smartech('identify', '');
+    smartech('dispatch',1,{});
+    </script>
 </head>
 <body>
     <header class="header">
@@ -88,15 +88,14 @@ smartech('dispatch',1,{});
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var username = document.getElementById('username').value;
-            if (username) {
+            if (username.includes('@gmail.com')) {
                 localStorage.setItem('username', username);
                 window.location.href = 'index.html';
+                smartech('identify',username)
             } else {
-                alert('Vui lòng nhập tên đăng nhập');
+                alert('Email không hợp lệ, vui lòng nhập đúng Email');
             }
         });
     </script>
-     
- 	
 </body>
 </html>
