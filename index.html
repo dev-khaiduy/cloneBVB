@@ -1583,30 +1583,6 @@ var ajax_object = {"url":"https:\/\/bvbank.net.vn\/wp-admin\/admin-ajax.php"};
         }
     });
 </script>
-//cardcategory
-<script>
-    // Hàm để chạy smartech khi click
-    function runSmartechScript(idName, url, title) {
-        smartech('dispatch', idName, {
-            'url': url,
-            'title': title
-        });
-    }
-
-    //Thêm sự kiện click cho thẻ "Thẻ"
-    document.getElementById('cardCategory').addEventListener('click', function(event) {
-        // event.preventDefault(); // Ngăn chặn hành động mặc định
-        runSmartechScript('card category', '/cardcategory.html', 'Card Category');
-        // window.location.href = '/cardcategory.html'; // Chuyển hướng sau khi chạy script
-    });
-
-    // Thêm sự kiện click cho thẻ "Khoản vay"
-    document.getElementById('loanCategory').addEventListener('click', function(event) {
-        event.preventDefault(); // Ngăn chặn hành động mặc định
-        runSmartechScript('loan category', '/loancategory.html', 'Loan Category');
-        window.location.href = '/loancategory.html'; // Chuyển hướng sau khi chạy script
-    });
-</script>
 
 <script>
     jQuery(document).on("gform_confirmation_loaded", function (e, form_id) {

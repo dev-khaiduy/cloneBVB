@@ -91,7 +91,8 @@
             if (username.includes('@gmail.com')) {
                 localStorage.setItem('username', username);
                 window.location.href = 'index.html';
-                smartech('identify',username)
+                smartech('identify',username);
+                smartech('dispatch','Log In',{});
             } else {
                 alert('Email không hợp lệ, vui lòng nhập đúng Email');
             }
