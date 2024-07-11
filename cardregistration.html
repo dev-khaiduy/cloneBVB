@@ -195,11 +195,13 @@ smartech('dispatch',1,{});
 
 
             let cardtypeText = document.getElementById('cardType').selectedOptions[0].text;
+            let income = document.getElementById('income').value;
             smartech('dispatch', 'Form Submit', {
                 'service_type':'Card',
                 'url': window.location.href,
                 'title': document.title,
-                'card_type': cardtypeText
+                'card_type': cardtypeText,
+                'personal_income': income
                     });
             
         });
