@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Ký Sản Phẩm</title>
     <script src='//cdnt.netcoresmartech.com/smartechclient.js'></script>
-<script>
-smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G' );
-smartech('register', '9028856153133683c37a942d18e07470');
-smartech('identify', '');
-smartech('dispatch',1,{});
-
-</script>
+    <script>
+        smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G');
+        smartech('register', '9028856153133683c37a942d18e07470');
+        smartech('identify', '');
+        smartech('dispatch',1,{});
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,20 +94,20 @@ smartech('dispatch',1,{});
             <img src="/assets/logo.png" alt="BVBank Logo">
         </div>
         <nav>
-            <a href="#">Tiết kiệm & Đầu tư</a>
-            <a href="#">Tài khoản & Dịch vụ</a>
-            <a href="#">Thẻ</a>
-            <a href="#">Khoản vay</a>
-            <a href="#">Bảo hiểm liên kết</a>
-            <a href="#">Ưu đãi</a>
-            <a href="#">Ngân hàng điện tử</a>
+            <a href="index.html">Tiết kiệm & Đầu tư</a>
+            <a href="index.html">Tài khoản & Dịch vụ</a>
+            <a href="index.html">Thẻ</a>
+            <a href="index.html">Khoản vay</a>
+            <a href="index.html">Bảo hiểm liên kết</a>
+            <a href="index.html">Ưu đãi</a>
+            <a href="index.html">Ngân hàng điện tử</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="content-wrap">
             <h2>Đăng Ký Sản Phẩm</h2>
-            <form action="cardsub.html" method="post">
+            <form id="registrationForm">
                 <div class="form-group">
                     <label for="email">Email *</label>
                     <input type="email" id="email" name="email" placeholder="Nhập email" required>
@@ -153,5 +152,30 @@ smartech('dispatch',1,{});
     <footer>
         <p>&copy; 2024 BVBank. All rights reserved. | <a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a></p>
     </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let product = document.getElementById('product').value;
+
+            smartech('dispatch', 'Form Submit', {
+                'service_type':'Loan' ,
+                'url': window.location.href,
+                'title': document.title,
+                'product':product
+            });
+            
+            alert('Đăng ký thành công!');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            smartech('dispatch', 'Loan Registration', {
+                'url': window.location.href,
+                'title': document.title
+            });
+        });
+
+    </script>
 </body>
 </html>

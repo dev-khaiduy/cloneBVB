@@ -102,13 +102,13 @@ smartech('dispatch',1,{});
                 <img src="/assets/logo.png" alt="BVBank Logo">
             </div>
             <nav>
-                <a href="#">Tiết kiệm & Đầu tư</a>
-                <a href="#">Tài khoản & Dịch vụ</a>
-                <a href="#">Thẻ</a>
-                <a href="#">Khoản vay</a>
-                <a href="#">Bảo hiểm liên kết</a>
-                <a href="#">Ưu đãi</a>
-                <a href="#">Ngân hàng điện tử</a>
+                <a href="index.html">Tiết kiệm & Đầu tư</a>
+                <a href="index.html">Tài khoản & Dịch vụ</a>
+                <a href="index.html">Thẻ</a>
+                <a href="index.html">Khoản vay</a>
+                <a href="index.html">Bảo hiểm liên kết</a>
+                <a href="index.html">Ưu đãi</a>
+                <a href="index.html">Ngân hàng điện tử</a>
             </nav>
         </div>
     </header>
@@ -190,7 +190,23 @@ smartech('dispatch',1,{});
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault();
+
+            let cardType = document.getElementById('cardType').value;
+
+            smartech('dispatch', 'Form Submit', {
+                'service_type':'Card' ,
+                'url': window.location.href,
+                'title': document.title,
+                'card_type': cardType
+                    });
             alert('Đăng ký thành công!');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            smartech('dispatch', 'Card Registration', {
+                'url': window.location.href,
+                'title': document.title
+            });
         });
     </script>
 </body>
