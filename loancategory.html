@@ -1411,6 +1411,13 @@ var ajax_object = {"url":"https:\/\/bvbank.net.vn\/wp-admin\/admin-ajax.php"};
             });
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+            smartech('dispatch', 'Loan Category', {
+                'url': window.location.href,
+                'title': document.title
+            });
+        });
 </script>
 
 

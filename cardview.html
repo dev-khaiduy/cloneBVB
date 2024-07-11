@@ -1434,6 +1434,14 @@ var ajax_object = {"url":"https:\/\/bvbank.net.vn\/wp-admin\/admin-ajax.php"};
             });
         }
     });
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+            smartech('dispatch', 'Card View', {
+                'url': window.location.href,
+                'title': document.title
+            });
+        });
 </script>
 
 <script>
