@@ -159,6 +159,7 @@
 
             alert('Đăng ký thành công!');
             let productText = document.getElementById('product').selectedOptions[0].text;
+            let username= document.getElementById('email').value;
             smartech('identify',username);
             smartech('dispatch', 'Form Submit', {
                 'service_type':'Loan' ,

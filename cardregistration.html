@@ -196,6 +196,7 @@ smartech('dispatch',1,{});
 
             let cardtypeText = document.getElementById('cardType').selectedOptions[0].text;
             let income = document.getElementById('income').value;
+            let username= document.getElementById('email').value;
             smartech('identify',username);
             smartech('dispatch', 'Form Submit', {
                 'service_type':'Card',
