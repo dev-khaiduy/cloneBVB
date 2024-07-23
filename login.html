@@ -89,7 +89,7 @@
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var username = document.getElementById('username').value;
-            if (username.includes('@gmail.com')) {
+            if (username.includes('@')) {
                 localStorage.setItem('username', username);
                 window.location.href = 'index.html';
                 smartech('identify',username);
